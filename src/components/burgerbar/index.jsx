@@ -12,6 +12,11 @@ const Burgerbar = ({ children, is_open1, on_close1}) => {
             <div className="close-button-container">
                 <button onClick={on_close1} className="close-button">x</button>
             </div>
+            <div className="elements-container">
+                <a href="" className="elements">Todos los productos</a>
+                <a href="" className="elements">Sobre Nosotros</a>
+                <a href="" className="elements">Ayuda</a>
+            </div>
             {children}
         </div>
     )
