@@ -4,7 +4,7 @@ import Corazones from '../components/pics/corazones.jpeg'
 import Lirio from '../components/pics/lirio.jpeg'
 export  const  Products = [
     {
-        id: 1,
+        id: 'lirio',
         category_id: 1,
         description: 'Pijama ideal para los dias calurosos',
         image: {Lirio},
@@ -13,7 +13,7 @@ export  const  Products = [
         sotck: 20,
     },
     {
-        id: 2,
+        id: 'bata',
         category_id: 2,
         description: 'Comodo y sencillo ideal para descansar',
         image: {Bata},
@@ -22,7 +22,7 @@ export  const  Products = [
         sotck: 5,
     },
     {
-        id: 3,
+        id: 'corazones',
         category_id: 3,
         description: 'Pijama ideal para los dias de lluvia',
         image: {Corazones},

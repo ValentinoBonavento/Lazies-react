@@ -1,13 +1,12 @@
-import React, { useState, useEffect} from 'react'
-import logo from './logo.svg';
+import React, { useState } from 'react'
+import Router from './router'
+import {Sidebar, Burgerbar, Header} from './components'
+import { Home } from './pages';
+import { Link } from 'react-router-dom';
 import './App.css';
-import Header from './components/navbar';
-import Sidebar from './components/sidebar'
-import Burgerbar from './components/burgerbar';
-import { Products } from './data/products';
-import Card from './components/card'
 
-function App() {
+
+const App = ()  =>{
 
   const [is_open, set_is_open] = useState(false);
    const on_handler_cart = () => {
@@ -18,19 +17,18 @@ function App() {
   const on_handler_burger = () => {
     set_is_open1(!is_open1);
   }
+  console.log(Home)
+  console.log(Router)
   return (
-    <div className="App">
+    <div className="container1">
       <Burgerbar on_close1={on_handler_burger}  is_open1={is_open1}/>
-      <Sidebar on_close={on_handler_cart} is_open={is_open}/>
+      <Sidebar on_close={on_handler_cart} is_open={is_open}>
+        <div className='cart-container'>
+        <Link to='./cart' className='button-cart'>Ver carrito</Link>
+        </div>
+      </Sidebar>
       <Header numbers_of_items= {0} on_handler_cart={on_handler_cart} on_handler_burger={on_handler_burger} />
-      <div>
-      <h1 className="container">Productos destacados</h1>
-      <div className='products-container'>
-          {Products.map((product) => (
-            <Card product={product} key={product.name} />
-          ))}
-        </div>
-        </div>
+      <Router />
     </div>
   );
 }

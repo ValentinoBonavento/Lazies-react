@@ -1,10 +1,10 @@
 import React from "react";  
 import './style.css';
 
-const Card  = ({ product }) =>  {
+const Card  = ({ product, onSelect }) =>  {
     const {id, category_id, description, image, name, price, stock} = product || {};
     return (
-        <div className="card">
+        <div className="card" onClick={() =>onSelect(product)}>
             <div className="container-image">
             <img className="card-image" src={Object.values(image)} alt={name} />
             </div>
