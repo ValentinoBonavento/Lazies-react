@@ -10,7 +10,7 @@ export  const  Products = [
         image: {Lirio},
         name: 'Pijama Lirio',
         price: 9000,
-        sotck: 20,
+        stock: 20,
     },
     {
         id: 'bata',
@@ -19,7 +19,7 @@ export  const  Products = [
         image: {Bata},
         name: 'Pijama Bata',
         price: 8500,
-        sotck: 5,
+        stock: 5,
     },
     {
         id: 'corazones',
@@ -28,6 +28,6 @@ export  const  Products = [
         image: {Corazones},
         name: 'Pijama Corazones',
         price: 9200,
-        sotck: 50,
+        stock: 50,
     },
 ]

@@ -10,6 +10,43 @@
     min-height: 590px;
     border: 1px solid black;
 }
+.sideCart{
+    width: 15%;
+    height: auto;
+}
+.sideAdd{
+    cursor: pointer;
+    background-color: white;
+    padding: 1rem;
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+.cardMax{
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 95%;
+    min-height: 590px;
+    border: 1px solid black;
+}
+.cardMax .card-image {
+    width: auto;
+    height: 100%;
+}
+.cardMax .card-button-container {
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
 .card:hover{
     box-shadow: 0 1px 1.5px 0 black;
     cursor: pointer;
@@ -24,6 +61,7 @@
     height: auto;
 }
 .card-content {
+    flex: 0.6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,7 +85,6 @@
     color: #212121;
 }
 .card-button-container {
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
@@ -82,4 +119,25 @@ input {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-button-plus:hover {
+    background-color: grey;
+  color: white;
+}
+
+.card-button-plus:disabled {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+.card-button-minus:disabled {
+    background-color: red;
+    cursor: not-allowed;
+
+}
+.card-button-minus:hover {
+    background-color: grey;
+  color: white;
 }

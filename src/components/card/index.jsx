@@ -1,10 +1,10 @@
 import React from "react";  
 import './style.css';
 
-const Card  = ({ product, onSelect }) =>  {
+const Card  = ({ product, onSelect, type = 'vCard', decreaseQty, increaseQty, numberOfItem }) =>  {
     const {id, category_id, description, image, name, price, stock} = product || {};
     return (
-        <div className="card" onClick={() =>onSelect(product)}>
+        <div className={type === 'vCard' ? 'card' : 'cardMax'} onClick={() =>onSelect(product)}>
             <div className="container-image">
             <img className="card-image" src={Object.values(image)} alt={name} />
             </div>
@@ -14,15 +14,20 @@ const Card  = ({ product, onSelect }) =>  {
                 <p className="card-price">${price}</p>
                 <p className="card-stock">{stock} in stock</p>
             </div>
-            <div className="card-button-container">
-                <button className='card-button-minus'>-</button>
+            {type === 'cardMax' && <div className="card-button-container">
+                <button onClick={() => decreaseQty(id)} className='card-button-minus' disabled={numberOfItem === 0}>-</button>
                 <input 
+                    disabled
                     className='card-input'
                     type='text'
-                    placeholder="0"
+                    value={numberOfItem}
                 />
-                <button className='card-button-plus'>+</button>
-            </div>
+                <button onClick={() => increaseQty(id)} className='card-button-plus' disabled={numberOfItem === stock}>+</button>
+            </div>}
+            {type === 'cardMax' && <div className="sideCart">
+                <button className="sideAdd">Agregar a carrito</button>
+            </div> }
+
         </div>
     )
 }

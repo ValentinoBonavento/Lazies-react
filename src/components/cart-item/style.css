@@ -1,0 +1,23 @@
+.cart-item-image {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    
+}
+.cart-item{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+}
+
+.cart-item-price{
+ font-size: large;
+}
+.cart-item-quantity{
+ font-weight: bold;
+}
+.cart-item-name {
+    padding: px;
+}
+
