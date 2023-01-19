@@ -1,2 +1,3 @@
 Este es un proyecto sobre el emprendimiento de mi mama, Lazies, se dedica a la venta de pijamas tanto como minoristas y mayoristas. 
 La idea del proyecto es simular una pagina web donde se pueda realizar las compras de los pijamas de forma minorista, falta realziar el checkout y el carrito como seccion de la we, el carrito esta implementado pero no en una pagina aparte, por decirlo de alguna manera. 
+El boton agregar al carrito en el detalle del producto es simplemente estetico, ya que los productos se agregan automaticamente al carrito, faltaria implementar ese cambio tambien. 
